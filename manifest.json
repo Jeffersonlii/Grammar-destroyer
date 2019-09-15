@@ -1,1 +1,25 @@
-{ "name": "Grammer Destroyer",    "version": "1.0",    "description": "Build an Extension!",    "manifest_version": 2 }
+{ 
+    "name": "Grammer Destroyer", "version": "1.0", "description": "Replaces every instance of '* and I' to 'me and *' in every page", "manifest_version": 2 ,
+
+    "background": { "scripts": ["background.js"], "persistent": false },
+
+    "page_action": { "default_popup": "popup.html", "default_icon": { "16": "images/pic.png", "32": "images/pic.png", "48": "images/pic.png", "128": "images/pic.png"}},    
+                     "icons": { "16": "images/pic.png", "32": "images/pic.png", "48": "images/pic.png", "128": "images/pic.png" },
+
+    "content_scripts": [{
+                        "matches": ["http://*", "https://*"],
+                         "js": ["background.js"],
+                         "run_at": "document_end"
+                        }]
+
+
+
+
+
+
+
+
+
+
+
+}
