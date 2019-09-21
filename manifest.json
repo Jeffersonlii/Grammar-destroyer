@@ -7,9 +7,9 @@
                      "icons": { "16": "images/pic.png", "32": "images/pic.png", "48": "images/pic.png", "128": "images/pic.png" },
 
     "content_scripts": [{
-                        "matches": ["http://*", "https://*"],
+                        "matches": ["http://*/*", "https://*/*"],
                          "js": ["background.js"],
-                         "run_at": "document_end"
+                         "run_at": "document_start"
                         }]
 
 
